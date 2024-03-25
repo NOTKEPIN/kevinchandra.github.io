@@ -28,7 +28,7 @@ body {
 .navbar-nav {
     list-style: none;
     display: flex;
-    align-items: space-between;
+    justify-content: space-evenly;
 }
 
 .navbar-nav li {
@@ -48,28 +48,27 @@ body {
 
 .header {
   display: flex;
-  align-items: center; /* Align items vertically in the center */
-  justify-content: space-between; /* Spread out the children elements */
-  padding: 0 10px; /* Add padding to ensure content is not touching the edges */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
 }
 
 .nameanddescription {
-  flex: 1; /* Allows the container to grow and take up space */
-  padding-right: 20px; /* Add space between text and image */
-  min-width: 0; /* Allows the div to shrink if necessary */
+  flex: 1;
+  padding-right: 20px;
+  min-width: 0;
 }
 
 .headshot {
-  width: 30%; /* Adjust based on desired size, affects the image inside .headshot */
-  height: auto; /* Maintain aspect ratio of the image */
+  width: 30%; 
+  height: auto; 
 }
 
-/* Typing effect container needs a fixed width to prevent layout shifts */
 .description {
-  display: inline-block; /* Allows the span to fit the content's width */
-  margin: 0 auto; /* Centers the description */
-  width: 400px; /* Fixed width to prevent layout shift during typing */
-  max-width: 100%; /* Ensure it doesn't overflow on smaller screens */
+  display: inline-block;
+  margin: 0 auto;
+  width: 400px; 
+  max-width: 100%; 
 }
 
 
@@ -99,11 +98,18 @@ body {
 }
 
 
+.intro{
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+}
 
 .sectionClass {
   padding: 80px 0px 50px 0px;
   position: relative;
   display: block;
+  padding-bottom: 0;
 }
 
 .row {
@@ -149,9 +155,6 @@ body {
   height: 100%;
   position: relative;
 }
-/********************************/
-/*  SECTION WORK EXPERIENCE
-********************************/
 
 #work-experience .sectiontitle .headerLine {
   width: 280px;
@@ -174,7 +177,7 @@ body {
   top: 3%;
   bottom: 0;
   width: 10px;
-  background: #324454;
+  background: black;
   left: 13%;
   height: 100%;
 }
@@ -211,7 +214,7 @@ body {
 
 .cbp_tmtimeline > li .cbp_tmlabel {
   margin: 0 0 15px 25%;
-  background: rgba(50, 68, 84, 1);
+  background: black;
   color: #FFF;
   padding: 30px;
   font-size: 1.2em;
@@ -224,7 +227,7 @@ body {
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
-  background: #2B3A48;
+  background: black;
 }
 
 .cbp_tmtimeline > li .cbp_tmlabel h3 {
@@ -287,7 +290,7 @@ body {
   -webkit-font-smoothing: antialiased;
   position: absolute;
   color: #151515;
-  background: #324454;
+  background: black;
   border-radius: 50%;
   text-align: center;
   left: 8%;
@@ -476,15 +479,14 @@ footer {
     vertical-align: middle; /* Align icons to the middle if text wraps */
 }
 
-/* Ensure icons and copyright text stack on smaller screens */
 @media (max-width: 767px) {
     .icons {
-        margin-bottom: 20px; /* Add space between icons and copyright text */
+        margin-bottom: 20px;
     }
 
     .icons img {
-        width: 35px; /* Optional: Adjust icon size for smaller screens */
-        margin: 0 5px; /* Adjust spacing around icons for smaller screens */
+        width: 35px;
+        margin: 0 5px;
     }
 
     footer div {
@@ -493,20 +495,18 @@ footer {
 }
 
 .icons a {
-    text-decoration: none; /* Removes underline from links */
-    color: inherit; /* Keeps the icon color the same as the text color, if applicable */
-    display: inline-block; /* Treats the link as a block to help with alignment and spacing */
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
 }
 
 .icons a::before, .icons a::after {
-    content: none; /* Removes before/after pseudo-elements that might be adding dashes */
+    content: none;
 }
 
-
-/* Copyright styling */
 .copyright {
-    display: block; /* Ensures this is on its own line */
-    margin-top: 20px; /* Space between icons and copyright */
-    font-size: 14px; /* Set a font size */
-    color: #333; /* Dark grey color for the text */
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
 }
