@@ -2,11 +2,11 @@ body {
     font-family: Open Sans, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     padding: 0;
     margin: 0;
+    border-style: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean font */
+    scroll-behavior: smooth;
   }
   
-*{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean font */
-}
 .navbar {
     background-color: #333;
     color: white;
@@ -32,7 +32,6 @@ body {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
-    
 }
 
 .navbar-nav li {
@@ -154,7 +153,7 @@ body {
   padding: 80px 0px 50px 0px;
   position: relative;
   display: block;
-  padding-bottom: 0;
+  padding-bottom: 20%;
 }
 
 .row {
@@ -313,13 +312,13 @@ body {
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-right-color: rgba(50, 68, 84, 1);
+  border-right-color: black;
   border-width: 10px;
   top: 70px;
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
-  border-right-color: #2B3A48;
+  border-right-color: black;
 }
 
 .cbp_tmtimeline > li .cbp_tmicon {
@@ -388,6 +387,41 @@ body {
   width: 100%;
 }
 
+/* Base styles remain unchanged */
+
+/* Timeline Animations */
+.cbp_tmtimeline > li {
+  visibility: hidden; /* Hide elements initially */
+  transform: translateX(-50px); /* Start elements slightly to the left */
+  opacity: 0; /* Start elements as transparent */
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out; /* Set up the transition */
+}
+
+/* Animation trigger */
+.cbp_tmtimeline > li.in-view {
+  visibility: visible;
+  transform: translateX(0); /* Elements slide to original position */
+  opacity: 1; /* Elements fade in */
+}
+
+/* Apply a staggered animation delay to timeline items */
+.cbp_tmtimeline > li:nth-child(1) { transition-delay: 0.1s; }
+.cbp_tmtimeline > li:nth-child(2) { transition-delay: 0.2s; }
+.cbp_tmtimeline > li:nth-child(3) { transition-delay: 0.3s; }
+.cbp_tmtimeline > li:nth-child(4) { transition-delay: 0.4s; }
+.cbp_tmtimeline > li:nth-child(5) { transition-delay: 0.5s; }
+.cbp_tmtimeline > li:nth-child(6) { transition-delay: 0.6s; }
+/* Add more if you have more items */
+
+/* Smooth scroll on clicking timeline links */
+.cbp_tmtimeline a {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cbp_tmtimeline a:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+}
 .faPra {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -486,22 +520,25 @@ body {
 
 
 
-
 footer {
   background: white;
   padding: 20px;
   text-align: center;
   box-sizing: border-box;
+  position: fixed; /* Fixed at the bottom */
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Full width */
   transform: translateY(100%); /* Start offscreen */
-  opacity: 0; /* Start as invisible */
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Smooth transition for slide up and fade in */
+  transition: transform 0.3s, opacity 0.3s; /* Animate the slide and fade */
+  z-index: 999; /* Ensure the footer is above other content */
 }
-
 
 .footer-visible {
-  transform: translateY(0);
-  opacity: 1;
+  transform: translateY(0); /* Slide up */
+  opacity: 1; /* Fade in */
 }
+
 
 
 @keyframes slideUp {
@@ -519,9 +556,9 @@ footer {
   animation: slideUp 0.5s ease-out forwards;
 }
 .icons img {
-    width: 40px; /* Set a standard size for icons */
-    margin: 0 10px; /* Provide space around icons */
-    vertical-align: middle; /* Align icons to the middle if text wraps */
+  width: 40px;
+  margin: 0 10px;
+  vertical-align: middle;
 }
 
 @media (max-width: 767px) {
@@ -551,7 +588,7 @@ footer {
 
 .copyright {
     display: block;
-    margin-top: 20px;
     font-size: 14px;
     color: #333;
+    margin-top: 20px;
 }
