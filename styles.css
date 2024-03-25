@@ -48,19 +48,31 @@ body {
 
 .header {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Spread out the children elements */
+  padding: 0 10px; /* Add padding to ensure content is not touching the edges */
 }
 
-.nameanddescription { /* Corrected class name */
-  text-align: center;
-  margin-right: 20px;
+.nameanddescription {
+  flex: 1; /* Allows the container to grow and take up space */
+  padding-right: 20px; /* Add space between text and image */
+  min-width: 0; /* Allows the div to shrink if necessary */
 }
 
 .headshot {
-  width: 30%;
-  height: 30%;
+  width: 30%; /* Adjust based on desired size, affects the image inside .headshot */
+  height: auto; /* Maintain aspect ratio of the image */
 }
+
+/* Typing effect container needs a fixed width to prevent layout shifts */
+.description {
+  display: inline-block; /* Allows the span to fit the content's width */
+  margin: 0 auto; /* Centers the description */
+  width: 400px; /* Fixed width to prevent layout shift during typing */
+  max-width: 100%; /* Ensure it doesn't overflow on smaller screens */
+}
+
+
 
 @keyframes typing {
   from { width: 0; }
