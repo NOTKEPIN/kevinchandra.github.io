@@ -47,50 +47,46 @@ body {
 
 
 .header {
-    display: flex;
-    align-items: center; /* Align items vertically in the center */
-    justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.intro{
+.nameanddescription { /* Corrected class name */
   text-align: center;
+  margin-right: 20px;
+}
+
+.headshot {
+  width: 30%;
+  height: 30%;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkCaret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid black;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 3.5s steps(40, end), blinkCaret .75s step-end infinite;
+}
+
+.description {
+  display: inline-block;
+  margin: 0 auto;
 }
 
 
-.nameanddescriptions {
-    text-align: center;
-    margin-right: 20px; /* Add space between text and image */
-}
-
-.headshot{
-    width: 30%; /* Adjust based on desired size, affects the image inside .headshot */
-    height: 30%; /* Maintain aspect ratio of the image */
-}
-
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-form,
-p,
-blockquote,
-th,
-td {
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
-  direction: ltr;
-}
 
 .sectionClass {
   padding: 80px 0px 50px 0px;
@@ -119,7 +115,7 @@ td {
 
 .sectiontitle h2 {
   font-size: 30px;
-  color: #222;
+  color: #000000;
   margin-bottom: 0px;
   padding-right: 10px;
   padding-left: 10px;
@@ -270,7 +266,6 @@ td {
   width: 150px;
   height: 150px;
   top: 3%;
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -304,7 +299,7 @@ td {
 .sectionClassProject {
   position: relative;
   display: block;
-  /* background: #f7f7f7; */
+  background: #f7f7f7;
   
   margin: 0 auto;
   padding: 80px 1.875em 3.125em;
@@ -395,12 +390,12 @@ td {
   .cbp_tmtimeline > li .cbp_tmlabel:after {
     right: auto;
     border-right-color: transparent;
-    border-bottom-color: rgb(50, 68, 84);
+    border-bottom-color: black;
     top: -20px;
   }
   .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
     border-right-color: transparent;
-    border-bottom-color: rgb(43, 58, 72);
+    border-bottom-color: black;
     left: 65px;
   }
   .cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel:after {
@@ -433,12 +428,36 @@ td {
 
 
 footer {
-    background: white; /* Setting the background color to white */
-    padding: 20px;
-    text-align: center; /* Center-align the content for all screen sizes */
-    box-sizing: border-box;
+  background: white;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  transform: translateY(100%); /* Start offscreen */
+  opacity: 0; /* Start as invisible */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Smooth transition for slide up and fade in */
 }
 
+
+.footer-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+@keyframes slideUp {
+  from {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.footer-anim {
+  animation: slideUp 0.5s ease-out forwards;
+}
 .icons img {
     width: 40px; /* Set a standard size for icons */
     margin: 0 10px; /* Provide space around icons */
