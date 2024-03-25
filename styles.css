@@ -52,6 +52,9 @@ body {
     justify-content: space-evenly;
 }
 
+.intro{
+  text-align: center;
+}
 
 
 .nameanddescriptions {
@@ -99,7 +102,7 @@ td {
   width: 980px;
   height: 100%;
   max-width: 100%;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .row:before,
@@ -290,9 +293,13 @@ td {
 }
 
 .cbp_tmicon img {
+    display: block;
     width: 100%;
     border-radius: 50%; /* Make it round to match other icons */
     background-color: white; /* In case you want to have a background */
+    border: none;
+    box-shadow: none;
+
   }
 .sectionClassProject {
   position: relative;
