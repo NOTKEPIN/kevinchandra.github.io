@@ -1,4 +1,4 @@
-const words = ['UI/UX Enthusiast.' , 'Business Analyst.' , 'Product Enthusiast.'];
+const words = ['UI/UX Enthusiast..' , 'Business Analyst..' , 'Product Enthusiast..'];
 let index = 0;
 const paragraph = document.getElementById('typing');
 const staticText = "I'm a ";

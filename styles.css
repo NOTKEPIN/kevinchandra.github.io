@@ -4,6 +4,9 @@ body {
     margin: 0;
   }
   
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean font */
+}
 .navbar {
     background-color: #333;
     color: white;
@@ -29,6 +32,7 @@ body {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
+    
 }
 
 .navbar-nav li {
@@ -63,6 +67,47 @@ body {
   width: 30%; 
   height: auto; 
 }
+
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0, 20px, 0);
+      opacity: 0;
+  }
+
+  to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+  }
+}
+
+.intro {
+  margin: 0;
+  padding: 50px 20px;
+  text-align: center; /* Center the text */
+  opacity: 0; /* Start with the intro invisible */
+  transform: translate3d(0, 20px, 0); /* Start slightly off-screen */
+  animation: fadeInUp 1.5s ease-out forwards; /* Animate into view */
+  animation-delay: 0.5s; /* Delay the start of the animation */
+  border-radius: 5px; /* Slightly rounded corners for a softer look */
+}
+
+.intro p {
+  color: #333; /* Dark color for the text */
+  font-size: 1.2em; /* Larger font size for readability */
+  line-height: 1.6; /* Spacing out the lines for better readability */
+  max-width: 800px; /* Max width to maintain optimal line length */
+  margin-left: auto; /* Center the paragraph in the div */
+  margin-right: auto; /* Center the paragraph in the div */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean font */
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+  .intro p {
+      font-size: 1.5em; /* Slightly larger font for larger screens */
+  }
+}
+
 
 .description {
   display: inline-block;
