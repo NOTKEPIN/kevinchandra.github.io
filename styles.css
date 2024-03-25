@@ -1,0 +1,474 @@
+body {
+    font-family: Open Sans, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    align-items: space-between;
+}
+
+.navbar-nav li {
+    padding: 0 15px;
+}
+
+.navbar-nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-nav a:hover {
+    color: #aaa;
+}
+
+
+.header {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-evenly;
+}
+
+
+
+.nameanddescriptions {
+    text-align: center;
+    margin-right: 20px; /* Add space between text and image */
+}
+
+.headshot{
+    width: 30%; /* Adjust based on desired size, affects the image inside .headshot */
+    height: 30%; /* Maintain aspect ratio of the image */
+}
+
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  direction: ltr;
+}
+
+.sectionClass {
+  padding: 80px 0px 50px 0px;
+  position: relative;
+  display: block;
+}
+
+.row {
+  width: 980px;
+  height: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+}
+
+.sectiontitle {
+  background-position: center;
+  text-align: center;
+  min-height: 20px;
+}
+
+.sectiontitle h2 {
+  font-size: 30px;
+  color: #222;
+  margin-bottom: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.headerLine {
+  width: 160px;
+  height: 2px;
+  display: inline-block;
+  background: #101F2E;
+}
+
+.fullWidth {
+  width: 100%;
+  display: table;
+  float: none;
+  padding: 0;
+  min-height: 1px;
+  height: 100%;
+  position: relative;
+}
+/********************************/
+/*  SECTION WORK EXPERIENCE
+********************************/
+
+#work-experience .sectiontitle .headerLine {
+  width: 280px;
+}
+
+#work-experience .headerline {
+  width: 280px;
+}
+
+.cbp_tmtimeline {
+  margin: 60px 30px 0 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+.cbp_tmtimeline:before {
+  content: '';
+  position: absolute;
+  top: 3%;
+  bottom: 0;
+  width: 10px;
+  background: #324454;
+  left: 13%;
+  height: 100%;
+}
+
+.cbp_tmtimeline li:last-child:before {
+  content: initial;
+}
+
+.cbp_tmtimeline > li .cbp_tmtime {
+  display: block;
+  width: 25%;
+  padding-right: 100px;
+  position: absolute;
+}
+
+.cbp_tmtimeline > li .cbp_tmtime span {
+  display: block;
+  text-align: right;
+}
+
+.cbp_tmtimeline > li .cbp_tmtime span:first-child {
+  font-size: 0.9em;
+  color: #bdd0db;
+}
+
+.cbp_tmtimeline > li .cbp_tmtime span:last-child {
+  font-size: 2.9em;
+  color: #3594cb;
+}
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
+  color: #6cbfee;
+}
+
+.cbp_tmtimeline > li .cbp_tmlabel {
+  margin: 0 0 15px 25%;
+  background: rgba(50, 68, 84, 1);
+  color: #FFF;
+  padding: 30px;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.4;
+  font-family: 'Open Sans';
+  position: relative;
+  border-radius: 5px;
+  min-height: 150px;
+}
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
+  background: #2B3A48;
+}
+
+.cbp_tmtimeline > li .cbp_tmlabel h3 {
+  margin-top: 0px;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+.cbp_tmtimeline > li .cbp_tmlabel h4 {
+  opacity: 0.7;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: 0px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  line-height: 1.2em;
+  font-weight: 600;
+  padding: 0;
+  padding-bottom: 10px;
+  margin: 0;
+  text-align: left;
+}
+
+.cbp_tmtimeline > li .cbp_tmlabel h4 i {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.cbp_tmtimeline > li .cbp_tmlabel:after {
+  right: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-right-color: rgba(50, 68, 84, 1);
+  border-width: 10px;
+  top: 70px;
+}
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
+  border-right-color: #2B3A48;
+}
+
+.cbp_tmtimeline > li .cbp_tmicon {
+  width: 150px;
+  height: 150px;
+  top: 3%;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  font-size: 1.4em;
+  line-height: 40px;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  color: #151515;
+  background: #324454;
+  border-radius: 50%;
+  text-align: center;
+  left: 8%;
+  margin: 0 0 0 -25px;
+}
+
+.cbp_tmtimeline li {
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.cbp_tmicon img {
+    width: 100%;
+    border-radius: 50%; /* Make it round to match other icons */
+    background-color: white; /* In case you want to have a background */
+  }
+.sectionClassProject {
+  position: relative;
+  display: block;
+  /* background: #f7f7f7; */
+  
+  margin: 0 auto;
+  padding: 80px 1.875em 3.125em;
+}
+
+.projectParagraph {
+  font-size: 18px;
+  margin: 0.5em 0 0;
+  font-family: 'Source Sans Pro', serif;
+}
+
+.projectParagraphLink {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  margin-top: 50px !important;
+  margin-bottom: 0px;
+  text-align: right;
+}
+
+.projectParagraphLink a {
+  color: white;
+  text-decoration: underline;
+}
+
+.cbp_tmicon img {
+  width: 100%;
+}
+
+.faPra {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 70px;
+  vertical-align: middle;
+  color: white;
+  line-height: 150px;
+}
+
+.label {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  color: #FFFFFF;
+  display: inline;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 5px 15px;
+}
+
+.date {
+  color: #BFC3C7;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+.date i {
+  margin-right: 8px;
+  vertical-align: top;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+@media (max-width: 1024px) {
+  .cbp_tmtimeline:before {
+    display: none;
+  }
+  .cbp_tmtimeline > li .cbp_tmtime {
+    width: 100%;
+    position: relative;
+    padding: 0 0 20px 0;
+  }
+  .cbp_tmtimeline > li .cbp_tmtime span {
+    text-align: left;
+  }
+  .cbp_tmtimeline > li .cbp_tmlabel {
+    margin: 30px 0 70px 0;
+    padding: 50px 30px 30px 30px;
+    font-weight: 400;
+    font-size: 95%;
+    float: left;
+  }
+  .cbp_tmtimeline > li .cbp_tmlabel:after {
+    right: auto;
+    border-right-color: transparent;
+    border-bottom-color: rgb(50, 68, 84);
+    top: -20px;
+  }
+  .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
+    border-right-color: transparent;
+    border-bottom-color: rgb(43, 58, 72);
+    left: 65px;
+  }
+  .cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel:after {
+    right: 65px;
+  }
+  .cbp_tmtimeline > li:nth-child(odd) .cbp_tmicon {
+    position: relative;
+    float: left;
+    left: auto;
+    margin: 0px 5px 0 0px;
+  }
+  .cbp_tmtimeline > li:nth-child(even) .cbp_tmicon {
+    position: relative;
+    float: right;
+    left: auto;
+    margin: 0px 5px 0 0px;
+  }
+  .cbp_tmtimeline > li .cbp_tmtime span:last-child {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 32em) {
+  .cbp-ntaccordion {
+    font-size: 70%;
+  }
+}
+
+
+
+
+footer {
+    background: white; /* Setting the background color to white */
+    padding: 20px;
+    text-align: center; /* Center-align the content for all screen sizes */
+    box-sizing: border-box;
+}
+
+.icons img {
+    width: 40px; /* Set a standard size for icons */
+    margin: 0 10px; /* Provide space around icons */
+    vertical-align: middle; /* Align icons to the middle if text wraps */
+}
+
+/* Ensure icons and copyright text stack on smaller screens */
+@media (max-width: 767px) {
+    .icons {
+        margin-bottom: 20px; /* Add space between icons and copyright text */
+    }
+
+    .icons img {
+        width: 35px; /* Optional: Adjust icon size for smaller screens */
+        margin: 0 5px; /* Adjust spacing around icons for smaller screens */
+    }
+
+    footer div {
+        display: block;
+    }
+}
+
+.icons a {
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Keeps the icon color the same as the text color, if applicable */
+    display: inline-block; /* Treats the link as a block to help with alignment and spacing */
+}
+
+.icons a::before, .icons a::after {
+    content: none; /* Removes before/after pseudo-elements that might be adding dashes */
+}
+
+
+/* Copyright styling */
+.copyright {
+    display: block; /* Ensures this is on its own line */
+    margin-top: 20px; /* Space between icons and copyright */
+    font-size: 14px; /* Set a font size */
+    color: #333; /* Dark grey color for the text */
+}
