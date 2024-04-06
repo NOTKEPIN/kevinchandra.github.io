@@ -103,6 +103,13 @@ function isInViewport(element) {
       }
     }
   }
+
+  
+  
+
+
+  
+  
   
   // Run the check once the content has loaded
   document.addEventListener('DOMContentLoaded', checkTimelineElements);
@@ -110,4 +117,10 @@ function isInViewport(element) {
   // Add the check to both scroll and resize for responsiveness
   window.addEventListener('scroll', checkTimelineElements);
   window.addEventListener('resize', checkTimelineElements);
+
+
+
+  
+  
+  
   

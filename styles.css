@@ -8,9 +8,13 @@ body {
   }
   
 .navbar {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.9);
     color: white;
     padding: 10px 0;
+    position: fixed; /* Keep the navbar fixed at the top of the page */
+    width: 100%; /* Ensure the navbar extends full width */
+    top: 0; /* Fix navbar to the top */
+    z-index: 1000;
 }
 
 .container {
@@ -48,12 +52,41 @@ body {
     color: #aaa;
 }
 
+@media (max-width: 768px) { /* Adjust based on your design breakpoint */
+  .navbar-nav {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+  }
+
+  .navbar-nav li {
+      padding: 0; /* Add vertical padding for tap targets */
+      margin:0;
+  }
+
+  .container {
+      flex-direction: column;
+      align-items: flex-start;
+      
+  }
+  .navbar {
+    position: static; /* Navbar will move with the page */
+    padding: 10px 0;
+  }
+
+  .header {
+    margin-top: 0; /* Remove the top margin for small screens */
+  }
+}
+
+
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
+  margin-top: 60px;
 }
 
 .nameanddescription {
@@ -391,10 +424,10 @@ body {
 
 /* Timeline Animations */
 .cbp_tmtimeline > li {
-  visibility: hidden; /* Hide elements initially */
-  transform: translateX(-50px); /* Start elements slightly to the left */
-  opacity: 0; /* Start elements as transparent */
-  transition: transform 0.7s ease-out, opacity 0.7s ease-out; /* Set up the transition */
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-50px); /* Adjust for left or right based on the index */
+  transition: transform 0.5s, opacity 0.5s;/* Set up the transition */
 }
 
 /* Animation trigger */
@@ -412,6 +445,8 @@ body {
 .cbp_tmtimeline > li:nth-child(5) { transition-delay: 0.5s; }
 .cbp_tmtimeline > li:nth-child(6) { transition-delay: 0.6s; }
 /* Add more if you have more items */
+
+
 
 /* Smooth scroll on clicking timeline links */
 .cbp_tmtimeline a {
@@ -520,6 +555,8 @@ body {
 
 
 
+
+
 footer {
   background: white;
   padding: 20px;
@@ -592,3 +629,26 @@ footer {
     color: #333;
     margin-top: 20px;
 }
+
+@keyframes dropDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the navbar */
+.navbar {
+  animation: dropDown 0.5s ease-out forwards;
+}
+
+/* Typing animation for the description */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
